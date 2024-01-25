@@ -1,0 +1,11 @@
+<div>
+    <ul>
+        <li *ngFor="let producto of productos">
+            <h3>{{producto.nombre | uppercase}} Detalles:</h3>
+            <div><span>Precio: </span>{{producto.precio}} €</div>
+            <div *ngIf="producto.descripcion"><span>Descripcion: </span>{{producto.descripcion}}</div>
+            <!--  <div><button (click)="compartirProducto(producto)">Compartir producto</button></div>-->
+            <app-alerta-producto [producto] ="producto"></app-alerta-producto>
+        </li>
+    </ul>
+</div>
